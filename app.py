@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, make_response
 
+import os
+from flask import Flask, render_template, request, redirect, url_for, flash, make_response
+from hospital_queue import Patient, EmergencyRoom
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SESSION_SECRET", "secret123")
